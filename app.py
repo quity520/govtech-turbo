@@ -26,8 +26,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 client = OpenAI(
-    api_key=os.getenv("DEEPSEEK_API_KEY"),
-    base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+    api_key=st.secrets["DEEPSEEK_API_KEY"],
+    base_url=st.secrets["DEEPSEEK_BASE_URL"]
 )
 storage = PolicyStorage()
 
