@@ -25,6 +25,10 @@ st.markdown("""
 
 """, unsafe_allow_html=True)
 
+import streamlit as st
+from openai import OpenAI
+
+# 明确指定 api_key 和 base_url 参数，并从 st.secrets 中精确读取对应的键名
 client = OpenAI(
     api_key=st.secrets["DEEPSEEK_API_KEY"],
     base_url=st.secrets["DEEPSEEK_BASE_URL"]
